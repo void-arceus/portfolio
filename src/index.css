@@ -1,1 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght,GRAD@0,17..18,400..700,-50..200;1,17..18,400..700,-50..200&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    position: relative;
+    font-family: "Google Sans", sans-serif;
+}
+
+@theme {
+    --font-monospace: "JetBrainsMono Nerd Font Mono";
+}
+
+:root {
+    /* Backgrounds */
+    --bg: #f7f7f5;
+    --surface: #ffffff;
+    --surface-hover: #f0f0ed;
+
+    /* Text */
+    --text: #181816;
+    --text-muted: #666660;
+    --text-subtle: #8a8a83;
+
+    /* Borders */
+    --border: #deded8;
+    --border-hover: #bdbdb5;
+
+    /* Accent */
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-soft: #eff6ff;
+
+    /* Shadow */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    /* button */
+    --github: #18181b;
+    --github-hover: #27272a;
+    --github-text: #ffffff;
+}
+
+.dark {
+    /* Backgrounds */
+    --bg: #111110;
+    --surface: #1a1a18;
+    --surface-hover: #222220;
+
+    /* Text */
+    --text: #f2f2ee;
+    --text-muted: #a5a59d;
+    --text-subtle: #777770;
+
+    /* Borders */
+    --border: #30302d;
+    --border-hover: #484842;
+
+    /* Accent */
+    --accent: #60a5fa;
+    --accent-hover: #93c5fd;
+    --accent-soft: #172554;
+
+    /* Shadow */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    /* buttons */
+    --github: #f4f4f5;
+    --github-hover: #d4d4d8;
+    --github-text: #18181b;
+}
