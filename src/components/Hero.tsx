@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 function Hero() {
     return (
         <main className="max-w-5xl bg-transparent mx-auto min-h-screen w-full flex items-center justify-center">
-            <div className="h-full flex-2 flex flex-col items-start justify-center gap-4">
+            <div className="w-[55%] h-full flex flex-col items-start justify-center gap-4 p-2">
                 <div className="font-monospace flex flex-col items-start">
                     <div className="flex items-center gap-0">
                         <Dot size={50} />
@@ -16,12 +16,14 @@ function Hero() {
                         Vinay Thakur
                     </h1>
                 </div>
-                <div className="font-monospace flex items-center text-lg font-bold">
-                    <span className="text-shadow-md/20">
+                <div className="font-monospace flex items-center font-bold">
+                    <span className="text-md text-shadow-md/20">
                         Full Stack Developer
                     </span>
                     <Dot size={30} />
-                    <span className="text-shadow-md/30">Backend Engineer</span>
+                    <span className="text-md text-shadow-md/30">
+                        Backend Engineer
+                    </span>
                 </div>
                 <div className="font-monospace w-full">
                     <span className="text-sm font-bold text-shadow-sm/10">
@@ -56,8 +58,50 @@ function Hero() {
                     </button>
                 </div>
             </div>
-            <div className="h-full flex-1 flex items-center justify-center">
-                Right Side
+            <div className="h-full w-[45%] flex items-center justify-center p-2">
+                <div className="w-full border border-(--border) rounded-lg font-monospace flex flex-col gap-2 shadow-(--shadow-md)">
+                    <div className="w-full border-b border-b-(--border) p-1 flex items-center justify-end">
+                        <span className="text-(--text) text-sm font-bold text-shadow-sm/20">
+                            vinay@arch-workspace:~
+                        </span>
+                    </div>
+                    <div className="w-full p-2 flex flex-col gap-2">
+                        <h1 className="text-(--text) text-sm font-bold text-shadow-sm/20">
+                            $ neofetch --short
+                        </h1>
+                        <table className="border border-(--border) rounded-lg overflow-hidden border-separate border-spacing-0">
+                            <tbody className="text-md text-(--text) font-semibold text-shadow-sm/20">
+                                <tr className="">
+                                    <td className="p-1">OS</td>
+                                    <td>:</td>
+                                    <td>Arch Linux x86_64</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="p-1">Focus</td>
+                                    <td>:</td>
+                                    <td>Backend and Distributed Systems</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="p-1">Core Stack</td>
+                                    <td>:</td>
+                                    <td className="">
+                                        C++, TypeScript, Node.js, Express, React
+                                    </td>
+                                </tr>
+                                <tr className="">
+                                    <td className="p-1">Goal</td>
+                                    <td>:</td>
+                                    <td>Make my future self proud</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="p-1">Status</td>
+                                    <td>:</td>
+                                    <td>Open for Roles</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </main>
     );

@@ -9,35 +9,35 @@ interface INavProps {
 
 function Navbar({ handleToggleTheme, theme, handleActiveMenu }: INavProps) {
     return (
-        <nav className="fixed w-full max-w-5xl left-1/2 -translate-x-1/2 p-2 rounded-md top-4 flex items-center justify-between bg-(--bg)">
-            <ul className="w-full flex items-center gap-6">
+        <nav className="z-50 fixed w-full max-w-5xl left-1/2 -translate-x-1/2 py-4 px-2 rounded-md top-0 flex items-center justify-between bg-(--bg)">
+            <ul className="w-full flex items-center gap-6 font-monospace text-sm font-bold text-shadow-sm/20">
                 <li
                     onClick={() => handleActiveMenu("hero")}
-                    className="text-sm font-medium hover:cursor-pointer hover:underline hover:text-gray-600 select-none"
+                    className="hover:cursor-pointer hover:underline text-(--text) hover:text-(--text-muted) select-none"
                 >
                     Home
                 </li>
                 <li
                     onClick={() => handleActiveMenu("projects")}
-                    className="text-sm font-medium hover:cursor-pointer hover:underline hover:text-gray-600 select-none"
+                    className="hover:cursor-pointer hover:underline text-(--text) hover:text-(--text-muted) select-none"
                 >
                     Projects
                 </li>
                 <li
                     onClick={() => handleActiveMenu("skills")}
-                    className="text-sm font-medium hover:cursor-pointer hover:underline hover:text-gray-600 select-none"
+                    className="hover:cursor-pointer hover:underline text-(--text) hover:text-(--text-muted) select-none"
                 >
                     Skills
                 </li>
                 <li
                     onClick={() => handleActiveMenu("resume")}
-                    className="text-sm font-medium hover:cursor-pointer hover:underline hover:text-gray-600 select-none"
+                    className="hover:cursor-pointer hover:underline text-(--text) hover:text-(--text-muted) select-none"
                 >
                     Resume
                 </li>
                 <li
                     onClick={() => handleActiveMenu("contact")}
-                    className="text-sm font-medium hover:cursor-pointer hover:underline hover:text-gray-600 select-none"
+                    className="hover:cursor-pointer hover:underline text-(--text) hover:text-(--text-muted) select-none"
                 >
                     Contact
                 </li>

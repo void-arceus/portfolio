@@ -8,6 +8,9 @@ export interface ITheme {
 
 function getThemePreference(): ITheme {
     const currTheme = localStorage.getItem("arceus-portfolio-theme");
+    if (!currTheme || currTheme.trim() === "") {
+        localStorage.setItem("arceus-portfolio-theme", "light");
+    }
     if (currTheme === "light" || currTheme === "dark") {
         return { theme: currTheme };
     }
@@ -42,6 +45,7 @@ function App() {
         else {
             htmlElement.classList.add("dark");
         }
+        localStorage.setItem("arceus-portfolio-theme", newTheme);
     }
 
     return (

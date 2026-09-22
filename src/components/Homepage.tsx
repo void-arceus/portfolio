@@ -3,6 +3,7 @@ import Projects from "./Projects";
 import Resume from "./Resume";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import Background from "./Background";
 
 interface HomePageProps {
     menu: string;
@@ -27,11 +28,15 @@ function Homepage({ menu }: HomePageProps) {
     }
 
     return (
-        <main className="relative overflow-hidden h-screen w-full flex items-center justify-center">
-            {/* Ambient background */}
+        <main className="grid-bg-container relative h-screen w-full flex items-center justify-center overflow-hidden">
+            {/* background */}
+            <div className="absolute z-0 h-screen w-full overflow-hidden">
+                <Background />
+            </div>
 
-            {/* Page content */}
-            <div className="relative z-10">{handleShowComponent()}</div>
+            <div className="z-10 relative w-full max-w-5xl h-full flex items-center justify-center">
+                {handleShowComponent()}
+            </div>
         </main>
     );
 }
