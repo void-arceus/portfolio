@@ -74,11 +74,11 @@ function Projects() {
                                             handleShowDetails();
                                             setSelectedProject(data);
                                         }}
-                                        className="text-sm font-bold text-shadow-sm/10 hover:cursor-pointer text-(--text) hover:text-(--text-muted)"
+                                        className="text-sm font-bold text-shadow-sm/10 hover:cursor-pointer text-(--text) hover:text-(--text-muted) select-none"
                                     >
                                         $ view details
                                     </button>
-                                    <button className="text-sm font-bold text-shadow-sm/10 hover:cursor-pointer text-(--text) hover:text-(--text-muted)">
+                                    <button className="text-sm font-bold text-shadow-sm/10 hover:cursor-pointer text-(--text) hover:text-(--text-muted) select-none">
                                         $ github
                                     </button>
                                 </div>

@@ -21,7 +21,7 @@ function ProjectDetail({ handleShowDetails, data }: IProjectDetailProps) {
                 </h1>
                 <button
                     onClick={handleShowDetails}
-                    className="text-sm font-bold text-shadow-sm/10 text-(--text) hover:cursor-pointer hover:text-(--text-muted)"
+                    className="text-sm font-bold text-shadow-sm/10 text-(--text) hover:cursor-pointer hover:text-(--text-muted) select-none"
                 >
                     cd ./
                 </button>
@@ -51,6 +51,62 @@ function ProjectDetail({ handleShowDetails, data }: IProjectDetailProps) {
                         [{tag}]
                     </span>
                 ))}
+            </div>
+
+            {data?.metrics && data?.metrics?.length > 0 && (
+                <div className="w-full flex flex-col gap-1">
+                    <h2 className="text-lg font-bold text-shadow-sm/20 text-(--text)">
+                        $ ./metrics --summary
+                    </h2>
+                    <div className="flex flex-col items-start justify-center">
+                        {data?.metrics?.map((m, idx) => (
+                            <pre
+                                key={idx}
+                                className="whitespace-pre-wrap text-sm font-semibold text-(--text-muted) text-shadow-sm/10"
+                            >
+                                [METRIC] {m.label.padEnd(14, " ")}: {m.value}
+                            </pre>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            <div className="w-full flex flex-col items-start justify-center gap-1">
+                <h2 className="text-lg font-bold text-(--text) text-shadow-sm/20">
+                    $ nvim overview.txt
+                </h2>
+                <p className="text-sm font-semibold text-(--text-muted) text-shadow-sm/10">
+                    {data?.description}
+                </p>
+            </div>
+            <div className="w-full flex flex-col gap-1">
+                <h2 className="text-lg font-bold text-shadow-sm/20 text-(--text)">
+                    $ nvim architecture_highlights.log
+                </h2>
+                <ul className="list-disc list-inside space-y-1">
+                    {data?.architectureHighlights.map((h, key) => (
+                        <li
+                            key={key}
+                            className="text-sm font-semibold text-shadow-sm/10 text-(--text-muted)"
+                        >
+                            {h}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div className="w-full flex items-center justify-end gap-3">
+                {data?.liveUrl && <a>$ live-demo --open</a>}
+                {data?.githubUrl && (
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-md font-bold text-shadow-sm/20 text-(--text) hover:cursor-pointer hover:text-(--text-muted)"
+                    >
+                        $ github --repo
+                    </a>
+                )}
             </div>
         </div>
     );
