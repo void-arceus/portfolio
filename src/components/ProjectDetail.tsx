@@ -7,7 +7,7 @@ interface IProjectDetailProps {
 
 function ProjectDetail({ handleShowDetails, data }: IProjectDetailProps) {
     return (
-        <div className="w-full max-w-5xl mx-auto p-2 flex flex-col gap-4 font-monospace overflow-scroll">
+        <div className="w-full max-w-5xl mx-auto p-2 flex flex-col gap-4 font-monospace overflow-scroll border border-(--border) rounded-xl shadow-md">
             <div className="w-full flex items-center justify-between">
                 <h1 className="text-sm font-bold text-shadow-sm/10 text-(--text)">
                     $ cd Programming/
@@ -23,7 +23,7 @@ function ProjectDetail({ handleShowDetails, data }: IProjectDetailProps) {
                     onClick={handleShowDetails}
                     className="text-sm font-bold text-shadow-sm/10 text-(--text) hover:cursor-pointer hover:text-(--text-muted) select-none"
                 >
-                    cd ./
+                    cd ../
                 </button>
             </div>
             <div className="w-full flex flex-col gap-0">
