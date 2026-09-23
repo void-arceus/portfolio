@@ -7,7 +7,7 @@ function Skills() {
                     $ ls ~/skills
                 </h1>
             </div>
-            <div className="w-full overflow-scroll flex-1 grid grid-cols-1 md:grid-cols-2 auto-rows-max gap-2 font-monospace">
+            <div className="w-full overflow-scroll flex-1 grid grid-cols-1 md:grid-cols-2 auto-rows-max gap-4 font-monospace">
                 <div className="h-40 border p-2 border-(--border) rounded-xl shadow-sm hover:shadow-md flex flex-col items-start justify-start gap-1">
                     <h1 className="text-(--text) text-md font-bold text-shadow-sm/10">
                         $ nvim languages.txt

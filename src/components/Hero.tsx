@@ -3,16 +3,15 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Hero() {
     return (
-        <main className="max-w-5xl bg-transparent mx-auto min-h-screen w-full flex items-center justify-center">
-            <div className="w-[55%] h-full flex flex-col items-start justify-center gap-4 p-2">
+        <main className="max-w-5xl bg-transparent mx-auto min-h-screen w-full flex items-center justify-center pt-16">
+            <div className="w-full md:w-[55%] h-full flex flex-col items-start justify-center gap-4 p-2">
                 <div className="font-monospace flex flex-col items-start">
                     <div className="flex items-center gap-0">
-                        <Dot size={50} />
-                        <span className="text-md font-bold text-shadow-sm/20">
+                        <span className="text-xs md:text-sm font-bold text-shadow-sm/20">
                             $whoami
                         </span>
                     </div>
-                    <h1 className="text-7xl font-extrabold text-shadow-lg/30">
+                    <h1 className="text-4xl sm:text-7xl font-extrabold text-shadow-lg/30">
                         Vinay Thakur
                     </h1>
                 </div>
@@ -58,7 +57,7 @@ function Hero() {
                     </button>
                 </div>
             </div>
-            <div className="h-full w-[45%] flex items-center justify-center p-2">
+            <div className="hidden h-full w-[45%] md:flex items-center justify-center p-2">
                 <div className="w-full border border-(--border) rounded-lg font-monospace flex flex-col gap-2 shadow-(--shadow-md)">
                     <div className="w-full border-b border-b-(--border) p-1 flex items-center justify-end">
                         <span className="text-(--text) text-sm font-bold text-shadow-sm/20">
