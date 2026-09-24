@@ -1,4 +1,4 @@
-import type { IProject, IProjectMetric } from "../data/projects";
+import type { IProject } from "../data/projects";
 
 interface IProjectDetailProps {
     handleShowDetails: () => void;
