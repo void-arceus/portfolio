@@ -133,7 +133,7 @@ function Navbar({ handleToggleTheme, theme, handleActiveMenu }: INavProps) {
                 </ul>
                 <button
                     onClick={handleToggleTheme}
-                    className="flex items-center justify-center gap-1 bg-(--accent) hover:bg-(--accent-hover) text-white px-4 py-1.5 rounded-md text-sm font-medium hover:cursor-pointer shadow-(--shadow-sm) hover:shadow-(--shadow-md)"
+                    className="flex items-center justify-center gap-1 bg-(--github) hover:bg-(--github-hover) text-(--github-text) px-4 py-1.5 rounded-md text-sm font-medium hover:cursor-pointer shadow-(--shadow-sm) hover:shadow-(--shadow-md)"
                 >
                     {theme.theme === "light" ? (
                         <SunMedium size={18} />

@@ -36,7 +36,7 @@ function Hero() {
                 <div className="flex items-center gap-1">
                     <button className="hover:cursor-pointer text-sm font-medium px-3 py-1.5 bg-(--github) hover:bg-(--github-hover) text-(--github-text) rounded-md">
                         <a
-                            href="#"
+                            href="https://github.com/void-arceus"
                             target="_blank"
                             className="flex items-center justify-center gap-1"
                         >
@@ -47,7 +47,7 @@ function Hero() {
                     <Dot />
                     <button className="hover:cursor-pointer text-sm font-medium bg-(--accent) hover:bg-(--accent-hover) px-3 py-1.5 rounded-md text-[#ffffff] shadow-sm hover:shadow-md">
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/in/vinay-thakur-3550a4285/"
                             target="_blank"
                             className="flex items-center gap-1"
                         >
