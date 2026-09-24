@@ -73,7 +73,7 @@ function ProjectDetail({ handleShowDetails, data }: IProjectDetailProps) {
 
             <div className="w-full flex flex-col items-start justify-center gap-1">
                 <h2 className="text-sm sm:text-base font-bold text-(--text) text-shadow-sm/20">
-                    $ nvim overview.txt
+                    $ cat overview.txt
                 </h2>
                 <p className="text-xs sm:text-sm font-semibold text-(--text-muted) text-shadow-sm/10">
                     {data?.description}
@@ -81,9 +81,9 @@ function ProjectDetail({ handleShowDetails, data }: IProjectDetailProps) {
             </div>
             <div className="w-full flex flex-col gap-1">
                 <h2 className="text-sm sm:text-base font-bold text-shadow-sm/20 text-(--text)">
-                    $ nvim architecture_highlights.log
+                    $ cat architecture_highlights.log
                 </h2>
-                <ul className="list-disc list-inside space-y-1">
+                <ul className="list-disc list-inside space-y-2">
                     {data?.architectureHighlights.map((h, key) => (
                         <li
                             key={key}

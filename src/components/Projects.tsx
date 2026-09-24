@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { projectData } from "../data/projects";
 import ProjectDetail from "./ProjectDetail";
-import type { IProject, IProjectMetric } from "../data/projects";
+import type { IProject } from "../data/projects";
 
 function Projects() {
     const [showDetail, setShowDetail] = useState<boolean>(false);
@@ -22,7 +22,7 @@ function Projects() {
             ) : (
                 <div className="w-full h-full flex flex-col items-center">
                     <div className="w-full flex items-center justify-start p-2 border-b border-(--border)">
-                        <h1 className="font-monospace text-sm font-bold text-shadow-sm/10">
+                        <h1 className="font-monospace text-xs sm:text-sm font-bold text-shadow-sm/10">
                             $ cd Programming/Projects/
                         </h1>
                     </div>
@@ -38,23 +38,23 @@ function Projects() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h1 className="text-md text-(--text) font-bold text-shadow-sm/10 line-clamp-1">
+                                    <h1 className="text-sm sm:text-base text-(--text) font-bold text-shadow-sm/10 line-clamp-1">
                                         {data.title}
                                     </h1>
-                                    <h2 className="text-xs text-(--text-muted) font-semibold text-shadow-sm/10 line-clamp-1">
+                                    <h2 className="text-xs sm:text-sm text-(--text-muted) font-semibold text-shadow-sm/10 line-clamp-1">
                                         {data.subtitle}
                                     </h2>
                                 </div>
                                 <div className="w-full flex items-center justify-start gap-2">
-                                    <h2 className="text-sm font-bold text-shadow-sm/10 text-(--text)">
+                                    <h2 className="text-xs sm:text-sm font-bold text-shadow-sm/10 text-(--text)">
                                         $ category:
                                     </h2>
-                                    <p className="text-sm font-semibold text-shadow-sm/10 text-(--text)">
+                                    <p className="text-xs sm:text-sm font-semibold text-shadow-sm/10 text-(--text)">
                                         {data.category}
                                     </p>
                                 </div>
                                 <div className="w-full">
-                                    <p className="line-clamp-3 text-sm font-semibold text-shadow-sm/10 text-(--text-muted)">
+                                    <p className="line-clamp-3 text-xs sm:text-sm font-semibold text-shadow-sm/10 text-(--text-muted)">
                                         {data.description}
                                     </p>
                                 </div>
@@ -62,7 +62,7 @@ function Projects() {
                                     {data.tags.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="text-md leading-1 font-bold text-shadow-sm/10"
+                                            className="text-sm sm:text-base leading-1 font-bold text-shadow-sm/10"
                                         >
                                             [{tag}]
                                         </span>
@@ -74,11 +74,11 @@ function Projects() {
                                             handleShowDetails();
                                             setSelectedProject(data);
                                         }}
-                                        className="text-sm font-bold text-shadow-sm/10 hover:cursor-pointer text-(--text) hover:text-(--text-muted) select-none"
+                                        className="text-xs sm:text-sm font-bold text-shadow-sm/10 hover:cursor-pointer text-(--text) hover:text-(--text-muted) select-none"
                                     >
                                         $ view details
                                     </button>
-                                    <button className="text-sm font-bold text-shadow-sm/10 hover:cursor-pointer text-(--text) hover:text-(--text-muted) select-none">
+                                    <button className="text-xs sm:text-sm font-bold text-shadow-sm/10 hover:cursor-pointer text-(--text) hover:text-(--text-muted) select-none">
                                         $ github
                                     </button>
                                 </div>
