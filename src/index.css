@@ -11,7 +11,7 @@ body {
 }
 
 @theme {
-    --font-monospace: "JetBrainsMono Nerd Font Mono";
+    --font-monospace: "JetBrains Mono", monospace;
 }
 
 :root {
